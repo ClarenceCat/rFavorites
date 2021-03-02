@@ -1,0 +1,41 @@
+/* 
+File: TopNav.css
+Programmer: Daniel Grew
+Desciption: css for the TopNav component
+*/
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.top-nav{
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.nav-logo{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.nav-logo span {
+    color: #DB7600;
+}
+
+.active{
+    color: #DB7600;
+}
