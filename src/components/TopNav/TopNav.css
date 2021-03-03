@@ -39,3 +39,7 @@ a {
 .active{
     color: #DB7600;
 }
+
+.icon{
+    margin-right: 10px;
+}
