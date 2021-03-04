@@ -1,12 +1,12 @@
 import './App.css';
 import TopNav from './components/TopNav/TopNav';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import SearchPage from './Pages/SearchPage';
 import FavoritesPage from './Pages/FavoritesPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
       <div className="App">
         <TopNav />
         <Switch>
