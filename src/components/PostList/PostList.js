@@ -31,7 +31,14 @@ export default function PostList({posts}) {
         let data = SavedPosts;
 
         // check if the user has already liked a post -> if yes then remove from list, else add to list
-        data.find(selectedPost => selectedPost === post_id) ? data.pop(post_id) : data.push(post_id)
+        // data.find(selectedPost => selectedPost === post_id) ? (data.pop(post_id)) : data.push(post_id)
+
+        if(data.find(selectedPost => selectedPost === post_id)){
+            let index = data.findIndex(element => element === post_id);
+            data.splice(index, 1);
+        } else{
+            data.push(post_id);
+        }
 
         // add array to localStorage
         localStorage.setItem('likedPosts', JSON.stringify(data))
