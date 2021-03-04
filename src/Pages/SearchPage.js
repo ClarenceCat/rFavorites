@@ -28,6 +28,7 @@ export default function SearchPage() {
             return
         });
     }
+    
 
     return (
         <div className='page'>
@@ -36,14 +37,14 @@ export default function SearchPage() {
                 <form className='searchform' onSubmit={onSubmit}>
                     <SearchBar placeholder='e.g. memes' value={{SearchValue, setSearchValue}} />
                 </form>
-                <div className="result-list">
-                    {Error !== null ? (
-                        <div>{Error}</div>
-                    ) : (
-                        <div>{SearchResults === null ? <p>Search a subreddit</p> : <PostList posts={SearchResults} />}</div>
-                    ) }
+            </div>
+            <div className="result-list">
+                {Error !== null ? (
+                    <div>{Error}</div>
+                ) : (
+                    <div>{SearchResults === null ? <p>Search a subreddit</p> : <PostList posts={SearchResults} />}</div>
+                ) }
                     
-                </div>
             </div>
         </div>
     )

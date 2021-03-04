@@ -15,7 +15,7 @@ input{
     padding-left: 30px;
 }
 
-button{
+.submit-btn{
     position: absolute;
     right: -25px;
     top: 7px;
