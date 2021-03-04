@@ -10,12 +10,20 @@ export default function PostList({posts}) {
     const [SavedPosts, setSavedPosts] = useState(null)
 
     useEffect( () => {
+        let isMounted = true
+
         async function setSaves() {
             const storageData = await localStorage.getItem('likedPosts')
-            storageData ? setSavedPosts(JSON.parse(storageData)) : setSavedPosts([])
+            if(isMounted){
+                storageData ? setSavedPosts(JSON.parse(storageData)) : setSavedPosts([])
+            }
         }
 
         setSaves();
+
+        return(() => {
+            isMounted = false;
+        })
     }, [SavedPosts])
 
     function likeClick(post_id){

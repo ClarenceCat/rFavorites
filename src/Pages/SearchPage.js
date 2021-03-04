@@ -15,7 +15,7 @@ export default function SearchPage() {
         event.preventDefault();
 
         // attempt to fetch reddit data
-        fetch('http://www.reddit.com/r/' + SearchValue + '/hot.json?limit=9')
+        fetch('https://www.reddit.com/r/' + SearchValue + '/hot.json?limit=9')
         .then(res => res.json())
         .then((data) => {
             const postList = data.data.children.map(data => data.data);
